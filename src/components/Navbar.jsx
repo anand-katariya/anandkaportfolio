@@ -17,7 +17,6 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  // Personal links
   const socialLinks = [
     { icon: <FiGithub />, url: "https://github.com/anand-katariya" },
     {
@@ -30,7 +29,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
-      // Detect active section
+
       const sections = [
         "about",
         "projects",
@@ -49,6 +48,7 @@ const Navbar = () => {
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -83,11 +83,10 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
-      {/* Matrix rain background */}
       <MatrixRain density={20} />
 
       <div className="container mx-auto px-6 flex justify-between items-center relative z-10">
-        {/* Name/Logo - Left */}
+        {/* Logo/Name */}
         <motion.div
           className="flex items-center gap-2 cursor-pointer"
           whileHover={{ scale: 1.05 }}
@@ -99,13 +98,12 @@ const Navbar = () => {
           <motion.span
             className="h-2 w-2 rounded-full bg-[#00FFAB]"
             animate={{ opacity: [0.2, 1, 0.2] }}
-            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+            transition={{ duration: 1.5, repeat: Infinity }}
           />
         </motion.div>
 
-        {/* Navigation Elements - Right */}
+        {/* Desktop Nav */}
         <div className="flex items-center gap-6">
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <ul className="flex gap-6">
               {navItems.map((item) => (
@@ -139,7 +137,6 @@ const Navbar = () => {
               ))}
             </ul>
 
-            {/* Social Links */}
             <div className="flex gap-4">
               {socialLinks.map((link, index) => (
                 <motion.a
@@ -160,8 +157,9 @@ const Navbar = () => {
             </div>
 
             <motion.a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/file/d/10ODPok1asAJ43gFnx6dQ0yxqgv9Em0U1/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00FFAB] to-[#58A6FF] text-[#0D1117] rounded-lg font-mono font-medium hover:shadow-lg hover:shadow-[#00FFAB]/30 transition-all duration-300"
               whileHover={{
                 scale: 1.05,
@@ -174,7 +172,7 @@ const Navbar = () => {
             </motion.a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <motion.button
             className="md:hidden text-[#E6EDF3] text-2xl z-50 relative"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -198,16 +196,10 @@ const Navbar = () => {
           >
             <MatrixRain density={15} />
 
-            {/* Animated terminal border */}
             <motion.div
               className="absolute inset-0 border-2 border-[#00FFAB] opacity-20 pointer-events-none"
-              animate={{
-                opacity: [0.1, 0.3, 0.1],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Number.POSITIVE_INFINITY,
-              }}
+              animate={{ opacity: [0.1, 0.3, 0.1] }}
+              transition={{ duration: 3, repeat: Infinity }}
             />
 
             <ul className="flex flex-col items-center gap-8 text-xl font-mono relative z-10">
@@ -231,7 +223,6 @@ const Navbar = () => {
                 </motion.li>
               ))}
 
-              {/* Mobile Social Links */}
               <div className="flex gap-6 mt-4">
                 {socialLinks.map((link, index) => (
                   <motion.a
@@ -255,8 +246,9 @@ const Navbar = () => {
               </div>
 
               <motion.a
-                href="/resume.pdf"
-                download
+                href="https://drive.google.com/file/d/10ODPok1asAJ43gFnx6dQ0yxqgv9Em0U1/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#00FFAB] to-[#58A6FF] text-[#0D1117] rounded-lg font-mono font-medium text-xl mt-8 w-full max-w-xs"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -267,7 +259,7 @@ const Navbar = () => {
                 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <FiDownload />$ Download Resume
+                <FiDownload /> Resume
               </motion.a>
             </ul>
           </motion.div>

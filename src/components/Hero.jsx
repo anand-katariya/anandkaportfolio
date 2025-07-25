@@ -6,13 +6,13 @@ import { FiDownload, FiMail } from "react-icons/fi";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiNextdotjs } from "react-icons/si";
 import MatrixRain from "./MatrixRain";
+import DeveloperIllustration from "./DeveloperIllustration"
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
   const fullText = "Full-Stack Developer";
 
-  // Typewriter effect
   useEffect(() => {
     let i = 0;
     const typing = setInterval(() => {
@@ -27,7 +27,6 @@ const Hero = () => {
         return () => clearInterval(cursor);
       }
     }, 100);
-
     return () => clearInterval(typing);
   }, []);
 
@@ -41,10 +40,9 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center bg-[#0D1117]">
-      {/* Matrix Background */}
       <MatrixRain density={60} />
 
-      {/* Glowing Floating Blobs */}
+      {/* Glowing Blobs */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-40 h-40 rounded-full bg-[#00FFAB]/10 blur-xl z-0"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
@@ -61,7 +59,7 @@ const Hero = () => {
         }}
       />
 
-      {/* Terminal Command */}
+      {/* Terminal Line */}
       <div className="absolute top-10 left-6 flex items-center font-mono text-[#E6EDF3] text-sm opacity-70 z-20">
         <span className="text-[#00FFAB]">user@portfolio:~$</span>
         <span className="ml-2">npm start</span>
@@ -72,9 +70,9 @@ const Hero = () => {
         />
       </div>
 
-      {/* Main Content */}
+      {/* Content */}
       <div className="container mx-auto px-6 py-24 flex flex-col lg:flex-row items-center justify-between relative z-10">
-        {/* Left Side Text */}
+        {/* Left Text */}
         <motion.div
           className="lg:w-1/2 mb-16 lg:mb-0"
           initial={{ opacity: 0, x: -50 }}
@@ -115,14 +113,16 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <motion.a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/file/d/10ODPok1asAJ43gFnx6dQ0yxqgv9Em0U1/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#00FFAB] to-[#58A6FF] text-[#0D1117] rounded-lg font-mono font-medium hover:shadow-lg hover:shadow-[#00FFAB]/30 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FiDownload />$ ./download_resume
             </motion.a>
+
             <motion.a
               href="#contact"
               className="flex items-center gap-2 px-6 py-3 border border-[#00FFAB] text-[#00FFAB] rounded-lg font-mono font-medium hover:bg-[#00FFAB]/10 hover:shadow-lg hover:shadow-[#00FFAB]/20 transition-all duration-300"
@@ -133,7 +133,7 @@ const Hero = () => {
             </motion.a>
           </motion.div>
 
-          {/* Tech Stack Pills */}
+          {/* Tech Stack */}
           <motion.div
             className="flex flex-wrap gap-3 mt-8"
             initial={{ opacity: 0 }}
@@ -160,7 +160,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right Side Illustration */}
+        {/* Right Illustration */}
         <motion.div
           className="lg:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: 50 }}
@@ -181,9 +181,9 @@ const Hero = () => {
               </div>
               <div className="relative z-10 p-4">
                 <div className="w-full h-64 bg-[#00FFAB]/10 rounded-lg flex items-center justify-center">
-                  <span className="text-[#00FFAB] font-mono text-lg">
-                    {"<DeveloperIllustration />"}
-                  </span>
+                  
+                    <DeveloperIllustration />
+                  
                 </div>
               </div>
             </div>
