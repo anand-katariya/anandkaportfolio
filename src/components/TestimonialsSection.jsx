@@ -8,15 +8,15 @@ const TestimonialsSection = () => {
     {
       quote:
         "Anand's technical expertise and problem-solving skills were instrumental in delivering our project ahead of schedule. His React implementation was flawless.",
-      name: "Sarah Johnson",
-      role: "Product Manager at TechSolutions",
+      name: "Shaan Solanki",
+      role: "Product Manager at Cadtech",
       photo: "/testimonial1.jpg",
       command: "$ review --client --rating=5",
     },
     {
       quote:
         "Working with Anand was a pleasure. His clean code and attention to performance optimization set a new standard for our team.",
-      name: "Michael Chen",
+      name: "Pratyush Shah",
       role: "Lead Developer at CodeCraft",
       photo: "/testimonial2.jpg",
       command: "$ review --peer --rating=5",
@@ -24,8 +24,8 @@ const TestimonialsSection = () => {
     {
       quote:
         "The backend architecture Anand designed scaled perfectly under heavy traffic. His Node.js skills are truly top-notch.",
-      name: "David Wilson",
-      role: "CTO at StartupX",
+      name: "Pankaj T.",
+      role: "CTO at StartX",
       photo: "/testimonial3.jpg",
       command: "$ review --employer --rating=5",
     },
