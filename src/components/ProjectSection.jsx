@@ -16,6 +16,7 @@ import {
   SiFirebase,
 } from "react-icons/si";
 import MatrixRain from "./MatrixRain";
+import project1Image from "../assets/project1.png";
 // Removed TypeScript-only import for JSX
 
 const ProjectSection = () => {
@@ -27,7 +28,7 @@ const ProjectSection = () => {
       description:
         "Static website for a cafe built with Next.js and Tailwind CSS. It is a simple website that allows users to view the menu and know more about the cafe.",
       tech: ["React", "Next.js", "Tailwind"],
-      image: "../assets/project1.png",
+      image: project1Image,
       demo: "https://static-website-design.vercel.app/",
       github: "https://github.com/anand-katariya/Static_Website_Design.git",
       command: "$ Static Website --For A Cafe",
@@ -165,11 +166,11 @@ const ProjectSection = () => {
             >
               {/* Project Image */}
               <div className="h-48 overflow-hidden relative">
-                <div className="absolute inset-0 bg-[#00FFAB]/10 flex items-center justify-center">
-                  <span className="text-[#00FFAB] font-mono text-lg">
-                    project_screenshot.jpg
-                  </span>
-                </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
               {/* Project Content */}
