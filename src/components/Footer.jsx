@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { FiGithub, FiLinkedin, FiMail, FiTwitter, FiInstagram, FiSun, FiMoon } from "react-icons/fi"
 import MatrixRain from "./MatrixRain"
 
-const Footer = ({ darkMode = true, toggleDarkMode }) => {
+const Footer = () => {
   // Terminal-like typing animation variants
   const typingVariants = {
     hidden: { opacity: 0, y: 10 },
@@ -30,11 +30,7 @@ const Footer = ({ darkMode = true, toggleDarkMode }) => {
   }
 
   // Theme toggle animation
-  const themeToggleHover = {
-    scale: 1.1,
-    boxShadow: "0 0 10px rgba(0, 255, 171, 0.5)",
-    backgroundColor: "#161B22",
-  }
+  
 
   return (
     <footer className="bg-[#0D1117] border-t border-[#30363D] py-8 relative overflow-hidden">
@@ -157,26 +153,7 @@ const Footer = ({ darkMode = true, toggleDarkMode }) => {
             </motion.a>
           </motion.div>
 
-          {/* Theme Toggle */}
-          {toggleDarkMode && (
-            <motion.button
-              onClick={toggleDarkMode}
-              whileHover={themeToggleHover}
-              whileTap={{ scale: 0.9 }}
-              className="mt-4 md:mt-0 p-2 rounded-full bg-[#161B22]/80 backdrop-blur-sm transition-colors border border-[#30363D]"
-              aria-label="Toggle dark mode"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-            >
-              {darkMode ? (
-                <FiSun className="text-[#00FFAB] text-xl" />
-              ) : (
-                <FiMoon className="text-[#00FFAB] text-xl" />
-              )}
-            </motion.button>
-          )}
+          
         </div>
 
         {/* Additional Links */}
