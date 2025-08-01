@@ -4,7 +4,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
-// import ProjectSection from "./components/ProjectSection";
+import ProjectSection from "./components/ProjectSection";
 import SkillsSection from "./components/SkillsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
@@ -25,7 +25,7 @@ export default function Home() {
         </header>
         <Hero />
         <AboutSection />
-        {/* <ProjectSection /> */}
+        <ProjectSection />
         <SkillsSection />
         <TestimonialsSection />
         <ContactSection />
