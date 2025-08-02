@@ -17,6 +17,7 @@ import {
 } from "react-icons/si";
 import MatrixRain from "./MatrixRain";
 import project1Image from "../assets/project1.png";
+import project2Image from "../assets/project2.png";
 // Removed TypeScript-only import for JSX
 
 const ProjectSection = () => {
@@ -27,11 +28,33 @@ const ProjectSection = () => {
       title: "Static Website For A Cafe",
       description:
         "Static website for a cafe built with Next.js and Tailwind CSS. It is a simple website that allows users to view the menu and know more about the cafe.",
-      tech: ["React", "Next.js", "Tailwind"],
+      tech: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Icons",
+        "Vercel",
+      ],
       image: project1Image,
       demo: "https://static-website-design.vercel.app/",
       github: "https://github.com/anand-katariya/Static_Website_Design.git",
       command: "$ Static Website --For A Cafe",
+    },
+    {
+      title: "Static Landing Page For a Business",
+      description:
+        "A bold and responsive business landing page for gyms, tuition centers, or photography services. Features scroll-based animations, service cards, testimonials carousel, and direct WhatsApp integration to boost client conversions.",
+      tech: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Icons",
+        "Vercel",
+      ],
+      image: project2Image,
+      demo: "https://business-landing-page-mocha.vercel.app/",
+      github: "https://github.com/anand-katariya/business-landing-page.git",
+      command: "$ launch --landing-service",
     },
   ];
 
