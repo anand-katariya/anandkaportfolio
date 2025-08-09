@@ -18,6 +18,7 @@ import {
 import MatrixRain from "./MatrixRain";
 import project1Image from "../assets/project1.png";
 import project2Image from "../assets/project2.png";
+import project3Image from "../assets/project3.png"; // Assuming you have a third project image
 // Removed TypeScript-only import for JSX
 
 const ProjectSection = () => {
@@ -55,6 +56,23 @@ const ProjectSection = () => {
       demo: "https://business-landing-page-mocha.vercel.app/",
       github: "https://github.com/anand-katariya/business-landing-page.git",
       command: "$ launch --landing-service",
+    },
+    {
+      title: "E-CELL PRMIT&R Web Site",
+      description:
+        "A website for the E-CELL PRMIT&R college club, showcasing their events, initiatives, and resources for entrepreneurship.",
+      tech: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Icons",
+        "Vercel",
+        "DaisyUI"
+      ],
+      image: project3Image,
+      demo: "",
+      github: "#",
+      command: "$ frontend based website --college club",
     },
   ];
 
