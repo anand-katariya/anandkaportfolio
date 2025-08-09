@@ -67,11 +67,11 @@ const ProjectSection = () => {
         "Framer Motion",
         "React Icons",
         "Vercel",
-        "DaisyUI"
+        "DaisyUI",
       ],
       image: project3Image,
       demo: "ecell.prmitr.in",
-      github: "#",
+      github: "https://github.com/anand-katariya/e-cell.git",
       command: "$ frontend based website --college club",
     },
   ];
