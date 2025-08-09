@@ -70,7 +70,7 @@ const ProjectSection = () => {
         "DaisyUI",
       ],
       image: project3Image,
-      demo: "ecell.prmitr.in",
+      demo: "https://ecell.prmitr.in/",
       github: "https://github.com/anand-katariya/e-cell.git",
       command: "$ frontend based website --college club",
     },
