@@ -18,13 +18,32 @@ import {
 import MatrixRain from "./MatrixRain";
 import project1Image from "../assets/project1.png";
 import project2Image from "../assets/project2.png";
-import project3Image from "../assets/project3.png"; // Assuming you have a third project image
+import project3Image from "../assets/project3.png";
+import project4Image from "../assets/project4.png";// Assuming you have a third project image
 // Removed TypeScript-only import for JSX
 
 const ProjectSection = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   const projects = [
+    {
+      title: "Dynamic Website For CADTECH",
+      description:
+        "Dynamic website for CADTECH built with MERN stack. It allows users to view and buy courses, register, and login.",
+      tech: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Icons",
+        "Node,js",
+        "Express.js",
+        "MongoDB",
+      ],
+      image: project4Image,
+      demo: "https://www.cadtech.co.in",
+      github: "###",
+      command: "$ Dynamic Website --For a Coaching Institute",
+    },
     {
       title: "Static Website For A Cafe",
       description:
